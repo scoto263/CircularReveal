@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         mRevealAnimation = new RevealAnimation(rootLayout, intent, this);
 
+
+
+
         onAnimateLayout(savedInstanceState, intent);
     }
 
