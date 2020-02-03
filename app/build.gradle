@@ -16,6 +16,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+
+    android.applicationVariants.all { variant ->
+//        variant.getPackageApplication().outputDirectory = new File("C:/Users/Administrator/Desktop/" + new Date().format("yyyy-MM-dd-HH"))
+
+        def apkFileNameFormat = "${project.name}_${variant.buildType.name}"+
+                "-v${android.defaultConfig.versionName}-time${new Date().format("yyyy-MM-dd-HH-mm")}.apk"
+        variant.outputs.first().outputFileName=apkFileNameFormat
+
+    }
+
 }
 
 dependencies {
