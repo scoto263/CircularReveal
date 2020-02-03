@@ -26,6 +26,8 @@ android {
                 "-v${android.defaultConfig.versionName}-time${new Date().format("yyyy-MM-dd-HH-mm")}.apk"
         variant.outputs.first().outputFileName=apkFileNameFormat
 
+        println "${variant.getPackageApplication().outputDirectory}--${variant.outputs.first().outputFileName}"
+
     }
 
 }
